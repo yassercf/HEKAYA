@@ -1,0 +1,8 @@
+{
+  "name": "Remix Hekaya",
+  "description": "عالم من القصص الخيالية الممتعة والآمنة للأطفال مع قارئ تفاعلي ولوحة تحكم حكاية للمؤلفين والإدارة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
