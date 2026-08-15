@@ -22,7 +22,7 @@ workflows:
             -keyalg RSA -keysize 2048 -validity 10000 \
             -dname "CN=Android Debug,O=Android,C=US"
 
-      - name: Download Gradle 8.9
+      - name: Download Gradle 9.3.1
         script: |
           cd "$CM_BUILD_DIR"
           curl -sSL -o gradle.zip https://services.gradle.org/distributions/gradle-8.9-bin.zip
@@ -30,7 +30,7 @@ workflows:
 
       - name: Build HEKAYA APK
         script: |
-          "$CM_BUILD_DIR/gradle-8.9/bin/gradle" assembleDebug --no-daemon
+          "$CM_BUILD_DIR/gradle-9.3.1/bin/gradle" assembleDebug --no-daemon
 
       - name: Verify APK is signed
         script: |
