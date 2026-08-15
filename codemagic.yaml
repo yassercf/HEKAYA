@@ -38,8 +38,10 @@ workflows:
 
       - name: Verify APK is signed
         script: |
-          $ANDROID_SDK_ROOT/build-tools/*/apksigner verify --print-certs \
-            app/build/outputs/apk/debug/app-debug.apk
+          LATEST_BUILD_TOOLS=$(ls -d "$ANDROID_SDK_ROOT"/build-tools/*/ | sort -V | tail -1)
+          "${LATEST_BUILD_TOOLS}apksigner" verify --print-certs \
+          app/build/outputs/apk/debug/app-debug.apk
+
 
     artifacts:
       - app/build/outputs/apk/debug/app-debug.apk
